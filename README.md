@@ -1,2 +1,2 @@
 # CloneSmith
-Open Source Clone of Rocksmith.
+Open Source Rhythm Game That Utilizes Real Instruments.
