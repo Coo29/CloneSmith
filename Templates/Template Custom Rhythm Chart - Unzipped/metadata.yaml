@@ -3,28 +3,28 @@ METADATA: {                                     # Song metadata.
     
     Title: "Sample Track",                      # Title of the track, self explanatory.
 
-    Artists: [                                  # In case of multiple artists.
+    Artists: {                                  # In case of multiple artists.
       "Sample Artist 1",
-    ],
+    },
     
     Album: "Sample Album",                      # Name of the album/EP/single. If it's a single just put the name of the track here as well.
     
     Year: 2000,                                 # Year released.
     
-    Description: [                              # Description of the track. Optional.
+    Description: {                              # Description of the track. Optional.
       "Sample description Line 1.",
       "Sample Description Line 2.",
-    ], 
+    }, 
 
-    Genres: [                                   # List of genres.
+    Genres: {                                   # List of genres.
       "Sample Genre 1",
       "Sample Genre 2",
-    ],
+    },
         
-    Charters: [
+    Charters: {
       "Sample Charter 1",                       # Name of the person(s) who made the chart.
       "Sample Charter 2",
-    ],                  
+    },                  
     
 }
 
@@ -32,10 +32,10 @@ MAIN: {
 
     Cover: "Cover.png",                         #Album cover art.
 
-    Background: [                               # Background image(s) or video, can be a .mp4 or a .png file. Optional. If there are multiple images then one will be picked at random.
+    Background: {                               # Background image(s) or video, can be a .mp4 or a .png file. Optional. If there are multiple images then one will be picked at random.
       "Background.png",                         
       "Background.mp4",
-    ],
+    },
 
     MainAudio: "Song.mp3",                      # Main audio file.
 
@@ -49,60 +49,60 @@ CHARTS: {                                       # Charts
       Name: "Lead Guitar",                      # Name of the chart as displayed in game. Try to stick to standard conventions for ease of access.
       Instrument: "Guitar",                     # Name of the instrument used.
       Key: "E Major",                           # Key of the chart. Should also stick to standard concventions.
-      Files: [                                  # Files the chart uses. Midi file is required, audio file is not.
+      Files: {                                  # Files the chart uses. Midi file is required, audio file is not.
         Audio: "LeadGuitar.mp3",                # Audio and midi file should share the same name.
         Midi: "LeadGuitar.mid",
-      ]
+      }
     },
 
     Chart_2: {
       Name: "Rhythm Guitar",
       Instrument: "Guitar",
       Key: "E Major",
-      Files: [
+      Files: {
         Audio: "RhythmGuitar.mp3",
         Midi: "RhythmGuitar.mid",
-      ]
+      }
     },
 
     Chart_3: {
       Name: "Alternate Lead Guitar",
       Instrument: "Guitar",
       Key: "E Minor",
-      Files: [
+      Files: {
         Audio: "Alt_LeadGuitar.mp3",
         Midi: "Alt_LeadGuitar.mid",
-      ]
+      }
     },
 
     Chart_4: {
       Name: "Bass",
       Instrument: "Bass",
       Key: "Drop D",
-      Files: [
+      Files: {  
         Audio: "Bass.mp3",
         Midi: "Bass.mid",
-      ]
+      }
     },
 
   Chart_5: {
       Name: "Keyboard",
       Instrument: "Keyboard",
       Key: "C Major",
-      Files: [
+      Files: {
         Audio: "",                             # Can be left blank if there is no audio file for the chart.
         Midi: "Keyboard.mid",
-      ]
+      }
     },
 
   Chart_6: {
       Name: "Drums",
       Instrument: "Drums",
       Key: "Drums",
-      Files: [
+      Files: {
         Audio: "Drums.mp3",
         Midi: "Drums.mid",
-      ]
+      }
     },
   }
 
@@ -113,19 +113,19 @@ MODIFIERS: {                                  # Different effects to be applied 
     Effect_1: {                               # Will always be "Effect_1", "Effect_2", etc. They do not need to be in any particular order.
       Name: "Distortion",                     # Name of the effect as displayed in game.
       File: "DistortionA.wav",                # Unsure what file format will be used currently, though .wav may work.
-      Timestamps: [                           # When the effects should be applied in the chart in seconds. I see no way this can go wrong.
-        30.0 - 120.0,
-        200.0 - 300.0,
-      ],
+      Timestamps: {                           # When the effects should be applied in the chart in seconds. I see no way this can go wrong.
+        [30.0, 120.0],
+        [200.0, 300.0],
+      },
     },
 
     Effect_2: {
       Name: "Clean Break",
       File: "CleanSoundA.wav",
-      Timestamps: [
-        0.0 - 30.0,
-        120.0 - 200.0,
-      ]
+      Timestamps: {
+        [0.0, 30.0],
+        [120.0, 200.0],
+      }
     }
 
   },
@@ -135,19 +135,19 @@ MODIFIERS: {                                  # Different effects to be applied 
     Effect_1: {                               # Will always be "Effect_1", "Effect_2", etc. They do not need to be in any particular order.
       Name: "Clean Break",                    # Name of the effect as displayed in game.
       File: "CleanSoundB.wav",                # Charts can share the same effect files.
-      Timestamps: [                           # When the effects should be applied in the chart in seconds. I see no way this can go wrong.
-        30.0 - 120.0,
-        200.0 - 300.0,
-      ],
+      Timestamps: {                          # When the effects should be applied in the chart in seconds. I see no way this can go wrong.
+        [30.0, 120.0],
+        [200.0, 300.0],
+      },
     },
 
     Effect_2: {
       Name: "Distortion",
       File: "DistortionA.wav",
-      Timestamps: [
-        0.0 - 30.0,
-        120.0 - 200.0,
-      ]
+      Timestamps: {
+        [0.0, 30.0],
+        [120.0, 200.0],
+      }
     }
 
   },
@@ -157,19 +157,19 @@ MODIFIERS: {                                  # Different effects to be applied 
     Effect_1: {                                
       Name: "Reverb",                         
       File: "ReverbA.wav",                    
-      Timestamps: [                           
-        30.0 - 120.0,
-        200.0 - 300.0,
-      ],
+      Timestamps: {
+        [30.0, 120.0],
+        [200.0, 300.0],
+      },
     },
 
     Effect_2: {
       Name: "Almost Clean",
       File: "SoftDistortA.wav",
-      Timestamps: [
-        0.0 - 30.0,
-        120.0 - 200.0,
-      ]
+      Timestamps: {
+        [0.0, 30.0],
+        [120.0, 200.0],
+      }
     }
 
   },     
@@ -179,9 +179,9 @@ MODIFIERS: {                                  # Different effects to be applied 
     Effect_1: {
       Name: "Clean Bass",
       File: "CleanBassA.wav",
-      Timestamps: [
-        0.0,
-      ]
+      Timestamps: {
+        [0.0],
+      }
     }
 
   },
@@ -191,9 +191,9 @@ MODIFIERS: {                                  # Different effects to be applied 
     Effect_1: {                                # Same as the guitar as well.
       Name: "Sample Keyboard Effect 1",
       File: "KeyboardEffect1.sfz",             # Uses the .sfz file format for sound effects.
-      Timestamps: [                            # If the effect does not change throughout the chart just put 0.0.
-        0.0,
-      ]
+      Timestamps: {                            # If the effect does not change throughout the chart just put 0.0.
+        [0.0],
+      }
     }
 
   },
@@ -203,9 +203,9 @@ MODIFIERS: {                                  # Different effects to be applied 
     Effect_1: {
       Name: "Sample Drum Effect 1",
       File: "DrumEffect1.sfz",
-      Timestamps: [
-        0.0,
-      ]
+      Timestamps: {
+        [0.0],
+      }
     }
 
   },
