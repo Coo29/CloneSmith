@@ -1,0 +1,23 @@
+- Constructed of a renamed zip file
+- Contains a file named metadata.yaml
+	- [[metadata.yaml example]]
+- Contains a file named Lyrics.lrc for lyrics.
+- A folder titled Audio inside will house the audio files except the root song, which will be in the main folder.
+	- Includes a main .mp3 file (or other format, TBD) for the root song.
+		- Optional audio files for instruments, such as Bass, Guitar, Drums, Keyboard etc.
+			- These follow the same naming convention as the .mid files, I.E. the Lead Guitar will be named LeadGuitar.mp3 (or whatever the audio format we decide to use is)
+			- This is so the audio can be absent when the player is filling in that instrument themselves, I.E. the player is playing guitar so the guitar track is absent from the song itself for better immersion.
+- A folder titled Charts will house the .mid files.
+	- .mid file for each instrument to follow by, named appropriately:
+	- Lead Guitar will be LeadGuitar.mid.
+	- Rhythm Guitar will be RhythmGuitar.mid.
+	- Bass Guitar will be Bass.mid.
+	- Keyboard will be Keyboard.mid.
+	- Drums will be Drums.mid.
+	- Any alternate versions of the mappings will have the prefix "Alt_" (I.E. Alternate Lead Guitar will be Alt_LeadGuitar.mid).
+- A folder titled Graphics will house all graphical data.
+	- Album art will be a 512x512 .png image named Cover.png.
+	- If desired, a background video and/or image for the track may be included, called Background.png or Background.mp4 respectively. If none is included, a default background or the album cover will be used instead, TBD.
+- A folder titled Effects will house all the audio effects.
+	- Effects to be applied to non-midi instruments use the .wav file format.
+	- Effects to be applied to midi instruments use the .sfz file format.
